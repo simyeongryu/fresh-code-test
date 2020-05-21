@@ -1,10 +1,8 @@
 import React from "react";
-import Banner from "../../Components/Banner";
+import Carousel from "../../Components/Carousel";
 
 const HomePresentor = ({ loading, banners }) => {
-  return (
-    <>{loading ? "loading" : <Banner loading={loading} banners={banners} />}</>
-  );
+  return <>{loading ? "loading" : <Carousel banners={banners} />}</>;
 };
 
 export default HomePresentor;

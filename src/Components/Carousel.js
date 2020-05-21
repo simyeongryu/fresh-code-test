@@ -10,8 +10,6 @@ const SlideContatiner = styled.div`
 `;
 
 const Banner = ({ banners }) => {
-  let slideImages = [];
-
   const properties = {
     duration: 5000,
     transitionDuration: 150,
@@ -21,10 +19,6 @@ const Banner = ({ banners }) => {
     pauseOnHover: true
   };
 
-  if (banners) {
-    slideImages = [...banners];
-  }
-
   return (
     <>
       {!banners ? (
@@ -33,15 +27,7 @@ const Banner = ({ banners }) => {
         <SlideContatiner>
           <Slide {...properties}>
             {banners.map(banner => {
-              return (
-                <SlideItem
-                  key={banner.id}
-                  imgUrl={banner.imgUrl}
-                  content={banner.content}
-                  imgWidth={banner.imgWidth}
-                  imgHeight={banner.imgHeight}
-                />
-              );
+              return <SlideItem key={banner.id} imgUrl={banner.imgUrl} />;
             })}
           </Slide>
         </SlideContatiner>
