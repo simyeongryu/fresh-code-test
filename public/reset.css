@@ -122,3 +122,21 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* carousel 커스터마이즈 */
+#root .react-slideshow-container .nav {
+  background-color: transparent;
+}
+
+#root .react-slideshow-container .nav:hover {
+  opacity: 0.5;
+}
+
+#root .react-slideshow-container .nav span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-color: #000;
+  border-style: solid;
+  transform: rotate(-135deg);
+}

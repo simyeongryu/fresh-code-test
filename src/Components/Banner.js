@@ -5,6 +5,7 @@ import SlideItem from "./SlideItem";
 
 const SlideContatiner = styled.div`
   width: 70%;
+  height: 100%;
   margin: auto;
 `;
 
@@ -13,7 +14,7 @@ const Banner = ({ banners }) => {
 
   const properties = {
     duration: 5000,
-    transitionDuration: 500,
+    transitionDuration: 150,
     infinite: true,
     indicators: true,
     arrows: true,
@@ -24,7 +25,6 @@ const Banner = ({ banners }) => {
     slideImages = [...banners];
   }
 
-  console.log(banners);
   return (
     <>
       {!banners ? (

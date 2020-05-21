@@ -8,26 +8,16 @@ const Container = styled.div`
 
 const Image = styled.div`
   background-image: url(${props => props.imgUrl});
-  width: 1024px;
-  height: 240px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
 `;
 
-const Content = styled.span`
-  font-weight: 600;
-  padding: 20px;
-  font-size: 20px;
-  background: transparent;
-  text-align: center;
-`;
-
-export default ({ imgUrl, content, imgWidth, imgHeight }) => (
+export default ({ imgUrl }) => (
   <Container>
-    <Image imgUrl={imgUrl} imgWidth={imgWidth} imgHeight={imgHeight}>
-      <Content>{content}</Content>
-    </Image>
+    <Image imgUrl={imgUrl}></Image>
   </Container>
 );
