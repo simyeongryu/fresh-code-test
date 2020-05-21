@@ -10,6 +10,8 @@
 
 1. axios
 2. react-router-dom
+3. redux
+4. react-redux
 
 ## 이슈
 
@@ -18,3 +20,5 @@
 #### 해결
 
 크롬 플러그인 설치
+
+[링크](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=ko)

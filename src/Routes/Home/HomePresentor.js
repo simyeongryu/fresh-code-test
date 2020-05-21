@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePresentor = () => {
+const HomePresentor = ({ loading, banners, menus, holidays }) => {
   return <div>Home</div>;
 };
 
