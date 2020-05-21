@@ -14,6 +14,8 @@ const HomeContainer = () => {
         const {
           data: { banners }
         } = await api.banners();
+
+        setBanners(banners);
       })();
 
       (async () => {
@@ -32,9 +34,9 @@ const HomeContainer = () => {
     } finally {
       setLoading(false);
     }
-  }, [loading, banners, menus, holidays]);
+  }, []);
 
-  return <HomePresentor />;
+  return <HomePresentor loading={loading} banners={banners} />;
 };
 
 export default HomeContainer;

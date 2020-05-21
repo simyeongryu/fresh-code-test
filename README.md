@@ -12,6 +12,8 @@
 2. react-router-dom
 3. redux
 4. react-redux
+5. react-slideshow-image
+6. styled-components
 
 ## 이슈
 
