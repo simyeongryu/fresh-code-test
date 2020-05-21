@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import SlideItem from "../../Components/SlideItem";
+import Loading from "../../Components/Loading";
 
 const SlideContatiner = styled.div`
   width: 70%;
@@ -29,7 +30,9 @@ const HomePresentor = ({ loading, banners }) => {
             })}
           </Slide>
         </SlideContatiner>
-      ) : null}
+      ) : (
+        <Loading />
+      )}
     </>
   );
 };
