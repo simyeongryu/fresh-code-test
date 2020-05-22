@@ -28,9 +28,9 @@ const Item = styled.li`
   text-align: center;
   font-weight: 400;
   color: ${props => (props.current ? "#30A76B" : "#6e7074")};
-  /* &:hover {
+  &:hover {
     color: "#30A76B";
-  } */
+  }
 `;
 
 const StyledLink = styled(Link)`
