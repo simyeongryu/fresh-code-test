@@ -19,7 +19,7 @@ const properties = {
   pauseOnHover: true
 };
 
-const HomePresentor = ({ loading, banners }) => {
+const HomePresentor = ({ banners }) => {
   return (
     <>
       {banners ? (
