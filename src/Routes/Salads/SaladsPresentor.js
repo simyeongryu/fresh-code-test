@@ -56,27 +56,6 @@ const SaladsPresentor = ({
   setMeat,
   setDairy
 }) => {
-  const handleClick = e => {
-    const category = e.target.innerText;
-    switch (category) {
-      case "전체보기":
-        setAll(originMenus);
-        break;
-      case "비건":
-        setVegan(originMenus);
-        break;
-      case "해산물":
-        setFishes(originMenus);
-        break;
-      case "육류":
-        setMeat(originMenus);
-        break;
-      case "유제품":
-        setDairy(originMenus);
-        break;
-    }
-  };
-
   return (
     <>
       {menus ? (
@@ -84,21 +63,11 @@ const SaladsPresentor = ({
           <Title>프레시 코드 샐러드</Title>
           <TabContainer>
             <TabList>
-              <TabItem onClick={handleClick} currentCategory={currentCategory}>
-                전체보기
-              </TabItem>
-              <TabItem onClick={handleClick} currentCategory={currentCategory}>
-                비건
-              </TabItem>
-              <TabItem onClick={handleClick} currentCategory={currentCategory}>
-                해산물
-              </TabItem>
-              <TabItem onClick={handleClick} currentCategory={currentCategory}>
-                육류
-              </TabItem>
-              <TabItem onClick={handleClick} currentCategory={currentCategory}>
-                유제품
-              </TabItem>
+              <TabItem onClick={() => setAll(originMenus)}>전체보기</TabItem>
+              <TabItem onClick={() => setVegan(originMenus)}>비건</TabItem>
+              <TabItem onClick={() => setFishes(originMenus)}>해산물</TabItem>
+              <TabItem onClick={() => setMeat(originMenus)}>육류</TabItem>
+              <TabItem onClick={() => setDairy(originMenus)}>유제품</TabItem>
             </TabList>
           </TabContainer>
           <Catalog menus={menus} />
