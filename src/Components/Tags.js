@@ -36,7 +36,6 @@ const VegetarianismItem = styled.div`
 const Tags = ({ tags }) => {
   const ingredientArr = tags.filter(tag => tag.type === "ingredient");
   const vegetarianismItem = tags.filter(tag => tag.type === "vegetarianism")[0];
-  console.log(vegetarianismItem);
 
   return (
     <>

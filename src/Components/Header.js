@@ -13,9 +13,7 @@ const Header = styled.header`
   align-items: center;
   padding: 0px 10px;
   background-color: white;
-  border-bottom-color: #e7e7e7;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom: 1px solid #e7e7e7;
 `;
 
 const List = styled.ul`
@@ -28,9 +26,6 @@ const Item = styled.li`
   text-align: center;
   font-weight: 400;
   color: ${props => (props.current ? "#30A76B" : "#6e7074")};
-  &:hover {
-    color: "#30A76B";
-  }
 `;
 
 const StyledLink = styled(Link)`

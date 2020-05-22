@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Tags from "./Tags";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +19,11 @@ const MenuItem = styled.li`
   width: 250px;
   height: 400px;
   padding: 5px;
+`;
+
+const MenuLink = styled(Link)`
+  width: 250px;
+  height: 400px;
 `;
 
 const ImageContainer = styled.div`
@@ -59,31 +65,23 @@ const MenuPrice = styled.p`
   margin-bottom: 10px;
 `;
 
-const TagsContainer = styled.div`
-  width: 100%;
-  height: 10px;
-`;
-
-const IngredientContainer = styled.div``;
-
-const VegetarianismContainer = styled.div``;
-
 const Catalog = ({ menus }) => {
-  console.log(menus);
   return (
     <Container>
       <MenuList>
         {menus.map((menu, i) => (
           <MenuItem key={i}>
-            <ImageContainer>
-              <Image imgUrl={menu.imgUrl} />
-            </ImageContainer>
-            <TextContainer>
-              <MenuName>{menu.name}</MenuName>
-              <MenuSummary>{menu.summary}</MenuSummary>
-              <MenuPrice>{menu.details[0].price}원&nbsp;~</MenuPrice>
-              <Tags tags={menu.tags} />
-            </TextContainer>
+            <MenuLink to={`/${menu.id}`}>
+              <ImageContainer>
+                <Image imgUrl={menu.imgUrl} />
+              </ImageContainer>
+              <TextContainer>
+                <MenuName>{menu.name}</MenuName>
+                <MenuSummary>{menu.summary}</MenuSummary>
+                <MenuPrice>{menu.details[0].price}원&nbsp;~</MenuPrice>
+                <Tags tags={menu.tags} />
+              </TextContainer>
+            </MenuLink>
           </MenuItem>
         ))}
       </MenuList>

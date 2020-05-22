@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Loading from "../../Components/Loading";
 import Catalog from "../../Components/Catalog";
+import { connect } from "react-redux";
+import { actionCreator } from "../../store";
+
+let currentCategory = null;
 
 const Container = styled.div`
   width: 70%;
@@ -23,8 +27,9 @@ const TabContainer = styled.div`
   opacity: 0.7;
   font-size: 13px;
   font-weight: 400;
-  border-bottom: 1px solid #e8e8e8;
+
   margin-bottom: 20px;
+  cursor: pointer;
 `;
 
 const TabList = styled.ul`
@@ -39,9 +44,39 @@ const TabItem = styled.li`
   justify-content: center;
   width: 20%;
   height: 100%;
+  border-bottom: 1px solid #e8e8e8;
 `;
 
-const SaladsPresentor = ({ menus }) => {
+const SaladsPresentor = ({
+  menus,
+  originMenus,
+  setAll,
+  setVegan,
+  setFishes,
+  setMeat,
+  setDairy
+}) => {
+  const handleClick = e => {
+    const category = e.target.innerText;
+    switch (category) {
+      case "전체보기":
+        setAll(originMenus);
+        break;
+      case "비건":
+        setVegan(originMenus);
+        break;
+      case "해산물":
+        setFishes(originMenus);
+        break;
+      case "육류":
+        setMeat(originMenus);
+        break;
+      case "유제품":
+        setDairy(originMenus);
+        break;
+    }
+  };
+
   return (
     <>
       {menus ? (
@@ -49,11 +84,21 @@ const SaladsPresentor = ({ menus }) => {
           <Title>프레시 코드 샐러드</Title>
           <TabContainer>
             <TabList>
-              <TabItem>전체보기</TabItem>
-              <TabItem>비건</TabItem>
-              <TabItem>해산물</TabItem>
-              <TabItem>육류</TabItem>
-              <TabItem>유제품</TabItem>
+              <TabItem onClick={handleClick} currentCategory={currentCategory}>
+                전체보기
+              </TabItem>
+              <TabItem onClick={handleClick} currentCategory={currentCategory}>
+                비건
+              </TabItem>
+              <TabItem onClick={handleClick} currentCategory={currentCategory}>
+                해산물
+              </TabItem>
+              <TabItem onClick={handleClick} currentCategory={currentCategory}>
+                육류
+              </TabItem>
+              <TabItem onClick={handleClick} currentCategory={currentCategory}>
+                유제품
+              </TabItem>
             </TabList>
           </TabContainer>
           <Catalog menus={menus} />
@@ -65,4 +110,14 @@ const SaladsPresentor = ({ menus }) => {
   );
 };
 
-export default SaladsPresentor;
+const mapStateToProps = (state, ownProps) => ({ menus: state });
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  setAll: menus => dispatch(actionCreator.setAll(menus)),
+  setVegan: menus => dispatch(actionCreator.setVegan(menus)),
+  setFishes: menus => dispatch(actionCreator.setFishes(menus)),
+  setMeat: menus => dispatch(actionCreator.setMeat(menus)),
+  setDairy: menus => dispatch(actionCreator.setDairy(menus))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SaladsPresentor);
