@@ -16,13 +16,12 @@ const MenuItem = styled.li`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 250px;
+  width: 25%;
   height: 400px;
-  padding: 5px;
 `;
 
 const MenuLink = styled(Link)`
-  width: 250px;
+  width: 270px;
   height: 400px;
 `;
 
@@ -31,13 +30,14 @@ const ImageContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 60%;
+  margin-bottom: 10px;
 `;
 
 const Image = styled.div`
   background-image: url(${props => props.imgUrl});
   background-size: cover;
   width: 100%;
-  height: 250px;
+  height: 270px;
 `;
 
 const TextContainer = styled.div`

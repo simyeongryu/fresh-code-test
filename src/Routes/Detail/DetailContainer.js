@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import CalendarPresentor from "./CalendarPresentor";
+import DetailPresentor from "./DetailPresentor";
 import { api } from "../../api";
 
-const CalendarContainer = () => {
+const DetailContainer = () => {
   const [holidays, setHolidays] = useState(null);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const CalendarContainer = () => {
     }
   }, []);
 
-  return <CalendarPresentor holidays={holidays} />;
+  return <DetailPresentor holidays={holidays} />;
 };
 
-export default CalendarContainer;
+export default DetailContainer;

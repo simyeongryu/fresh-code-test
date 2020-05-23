@@ -5,9 +5,12 @@ import SlideItem from "../../Components/SlideItem";
 import Loading from "../../Components/Loading";
 
 const SlideContatiner = styled.div`
-  width: 70%;
+  width: 100%;
   height: 100%;
   margin: auto;
+  div {
+    width: 100%;
+  }
 `;
 
 const properties = {

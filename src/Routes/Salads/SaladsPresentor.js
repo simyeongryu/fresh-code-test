@@ -6,8 +6,9 @@ import { connect } from "react-redux";
 import { actionCreator } from "../../store";
 
 const Container = styled.div`
-  width: 70%;
+  width: 80%;
   margin: auto;
+  padding-top: 80px;
 `;
 
 const Title = styled.h1`

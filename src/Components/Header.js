@@ -45,9 +45,6 @@ export default withRouter(({ location: { pathname } }) => {
         <Item current={pathname === "/salads"}>
           <StyledLink to="/salads">Salads</StyledLink>
         </Item>
-        <Item current={pathname === "/calendar"}>
-          <StyledLink to="/calendar">Calendar</StyledLink>
-        </Item>
       </List>
     </Header>
   );
