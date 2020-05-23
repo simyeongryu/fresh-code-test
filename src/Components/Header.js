@@ -40,10 +40,10 @@ export default withRouter(({ location: { pathname } }) => {
     <Header>
       <List>
         <Item current={pathname === "/"}>
-          <StyledLink to="/">Carousel</StyledLink>
+          <StyledLink to="/">홈</StyledLink>
         </Item>
         <Item current={pathname === "/salads"}>
-          <StyledLink to="/salads">Salads</StyledLink>
+          <StyledLink to="/salads">메뉴보기</StyledLink>
         </Item>
       </List>
     </Header>

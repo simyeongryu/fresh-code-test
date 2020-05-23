@@ -13,7 +13,7 @@ export default ({ holidays }) => {
       className="react-date-picker-custum"
       onClick={onClick}
       value={value}
-      placeholder="배송일을 선택"
+      placeholder="배송일 선택"
       readOnly
     />
   );
