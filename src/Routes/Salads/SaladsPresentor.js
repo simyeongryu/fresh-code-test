@@ -5,8 +5,6 @@ import Catalog from "../../Components/Catalog";
 import { connect } from "react-redux";
 import { actionCreator } from "../../store";
 
-let currentCategory = null;
-
 const Container = styled.div`
   width: 70%;
   margin: auto;

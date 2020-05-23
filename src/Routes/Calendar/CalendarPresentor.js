@@ -1,8 +1,9 @@
 import React from "react";
+import Loading from "../../Components/Loading";
+import Calendar from "../../Components/Calendar";
 
 const CalendarPresentor = ({ holidays }) => {
-  console.log(holidays);
-  return <h1>Hidfdf</h1>;
+  return <>{holidays ? <Calendar holidays={holidays} /> : <Loading />}</>;
 };
 
 export default CalendarPresentor;

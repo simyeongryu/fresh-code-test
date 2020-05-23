@@ -11,12 +11,12 @@ const SlideContatiner = styled.div`
 `;
 
 const properties = {
-  duration: 5000,
-  transitionDuration: 150,
+  duration: 5000, // 배너 지속 시간
+  transitionDuration: 150, // 배너 넘어가는 속도
   infinite: true,
   indicators: true,
   arrows: true,
-  pauseOnHover: true
+  pauseOnHover: true // 마우스 올리면 멈춤
 };
 
 const HomePresentor = ({ banners }) => {
@@ -25,9 +25,9 @@ const HomePresentor = ({ banners }) => {
       {banners ? (
         <SlideContatiner>
           <Slide {...properties}>
-            {banners.map(banner => {
-              return <SlideItem key={banner.id} imgUrl={banner.imgUrl} />;
-            })}
+            {banners.map(banner => (
+              <SlideItem key={banner.id} imgUrl={banner.imgUrl} />
+            ))}
           </Slide>
         </SlideContatiner>
       ) : (

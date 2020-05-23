@@ -14,6 +14,7 @@
 4. react-redux
 5. react-slideshow-image
 6. styled-components
+7. react-datepicker
 
 ## 이슈
 
