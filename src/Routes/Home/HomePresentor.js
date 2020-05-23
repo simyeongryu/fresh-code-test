@@ -8,6 +8,7 @@ const SlideContatiner = styled.div`
   width: 100%;
   height: 100%;
   margin: auto;
+  /* library에 기본적으로 들어가 있는 div 조절 */
   div {
     width: 100%;
   }
