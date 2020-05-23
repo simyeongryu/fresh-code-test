@@ -8,13 +8,23 @@ export default ({ holidays }) => {
   const excludeDates = [];
   holidays.forEach(item => excludeDates.push(new Date(item.holiday)));
 
+  const CustomInput = ({ value, onClick }) => (
+    <input
+      className="react-date-picker-custum"
+      onClick={onClick}
+      value={value}
+      placeholder="배송일을 선택"
+      readOnly
+    />
+  );
+
   return (
     <DatePicker
       selected={startDate} // 선택된 날짜 표시
       onChange={date => setStartDate(date)} // 날짜 선택 시
       excludeDates={excludeDates} // 휴일 제외
       dateFormat="yyyy-MM-dd" // 날짜 형식
-      placeholderText="배송일을 선택하세요."
+      customInput={<CustomInput />}
     />
   );
 };

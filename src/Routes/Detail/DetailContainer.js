@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const DetailContainer = () => {
   const param = useParams();
-
   const [holidays, setHolidays] = useState(null);
   const [menu, setMenu] = useState(null);
 
