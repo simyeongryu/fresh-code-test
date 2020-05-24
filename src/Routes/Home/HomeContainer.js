@@ -11,7 +11,6 @@ const HomeContainer = () => {
         const {
           data: { banners }
         } = await api.banners();
-
         setBanners(banners);
       })();
     } catch (e) {
