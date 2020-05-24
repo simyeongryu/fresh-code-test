@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/github.io/fresh-code-test/static/js/main.1fb4301d.chunk.js",
+    "main.js.map": "/github.io/fresh-code-test/static/js/main.1fb4301d.chunk.js.map",
+    "runtime-main.js": "/github.io/fresh-code-test/static/js/runtime-main.4bf86e0a.js",
+    "runtime-main.js.map": "/github.io/fresh-code-test/static/js/runtime-main.4bf86e0a.js.map",
+    "static/css/2.57b6e686.chunk.css": "/github.io/fresh-code-test/static/css/2.57b6e686.chunk.css",
+    "static/js/2.d8db32ea.chunk.js": "/github.io/fresh-code-test/static/js/2.d8db32ea.chunk.js",
+    "static/js/2.d8db32ea.chunk.js.map": "/github.io/fresh-code-test/static/js/2.d8db32ea.chunk.js.map",
+    "index.html": "/github.io/fresh-code-test/index.html",
+    "precache-manifest.4dce6894e51a097368e56c9b4d68b85f.js": "/github.io/fresh-code-test/precache-manifest.4dce6894e51a097368e56c9b4d68b85f.js",
+    "service-worker.js": "/github.io/fresh-code-test/service-worker.js",
+    "static/css/2.57b6e686.chunk.css.map": "/github.io/fresh-code-test/static/css/2.57b6e686.chunk.css.map",
+    "static/js/2.d8db32ea.chunk.js.LICENSE.txt": "/github.io/fresh-code-test/static/js/2.d8db32ea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bf86e0a.js",
+    "static/css/2.57b6e686.chunk.css",
+    "static/js/2.d8db32ea.chunk.js",
+    "static/js/main.1fb4301d.chunk.js"
+  ]
+}
