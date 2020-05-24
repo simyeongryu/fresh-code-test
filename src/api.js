@@ -1,13 +1,17 @@
 import axios from "axios";
 
+const url = axios.create({
+  baseURL: "https://exam.freshcode.me/front/"
+})
+
 export const api = {
   banners() {
-    return axios.get("banners");
+    return url.get("banners");
   },
   salads() {
-    return axios.get("salads");
+    return url.get("salads");
   },
   dayoff() {
-    return axios.get("dayoff");
+    return url.get("dayoff");
   }
 };
