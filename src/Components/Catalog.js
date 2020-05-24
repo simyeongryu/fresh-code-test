@@ -4,7 +4,7 @@ import Tags from "./Tags";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  display: flex;
+  width: 100%;
 `;
 
 const MenuList = styled.ul`
@@ -12,18 +12,8 @@ const MenuList = styled.ul`
   flex-wrap: wrap;
 `;
 
-const MenuItem = styled.li`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 285px;
-  height: 400px;
-  padding: 5px;
-  margin-bottom: 20px;
-`;
-
 const MenuLink = styled(Link)`
-  width: 285px;
+  width: 320px;
   height: 400px;
 `;
 
@@ -31,21 +21,32 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 60%;
-  margin-bottom: 25px;
+  height: 320px;
+  margin-bottom: 10px;
 `;
 
 const Image = styled.div`
   background-image: url(${props => props.imgUrl});
   background-size: cover;
   width: 100%;
-  height: 285px;
+  height: 320px;
+`;
+
+const MenuItem = styled.li`
+  width: 320px;
+  height: 420px;
+  padding: 10px;
+  margin-bottom: 25px;
+  &:hover {
+    ${ImageContainer} {
+      opacity: 0.7;
+    }
+  }
 `;
 
 const TextContainer = styled.div`
   width: 100%;
   height: 40%;
-  padding-top: 30px;
 `;
 
 const MenuName = styled.p`

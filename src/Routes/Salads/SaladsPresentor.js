@@ -5,6 +5,13 @@ import Catalog from "../../Components/Catalog";
 import { connect } from "react-redux";
 import { actionCreator } from "../../store";
 
+let currentTab = "all";
+const ALL = "all";
+const VEGAN = "vegan";
+const FISHES = "fishes";
+const MEAT = "meat";
+const DAIRY = "dairy";
+
 const Container = styled.div`
   width: 80%;
   margin: auto;
@@ -40,9 +47,11 @@ const TabItem = styled.li`
   width: 20%;
   height: 100%;
   border-bottom: 1px solid #e8e8e8;
+  color: ${props => (props.current ? "#30a76b" : "#656565")};
+  border-bottom: ${props => (props.current ? "2px solid #30a76b" : "#656565")};
+  font-weight: 600;
   &:hover {
     color: #30a76b;
-    border-bottom: 2px solid #30a76b;
   }
 `;
 
@@ -55,6 +64,27 @@ const SaladsPresentor = ({
   setMeat,
   setDairy
 }) => {
+  const handleClickAll = () => {
+    setAll(originMenus);
+    currentTab = ALL;
+  };
+  const handleClickVegan = () => {
+    setVegan(originMenus);
+    currentTab = VEGAN;
+  };
+  const handleClickFishes = () => {
+    setFishes(originMenus);
+    currentTab = FISHES;
+  };
+  const handleClickMeat = () => {
+    setMeat(originMenus);
+    currentTab = MEAT;
+  };
+  const handleClickDairy = () => {
+    setDairy(originMenus);
+    currentTab = DAIRY;
+  };
+
   return (
     <>
       {menus ? (
@@ -62,11 +92,30 @@ const SaladsPresentor = ({
           <Title>프레시 코드 샐러드</Title>
           <TabContainer>
             <TabList>
-              <TabItem onClick={() => setAll(originMenus)}>전체보기</TabItem>
-              <TabItem onClick={() => setVegan(originMenus)}>비건</TabItem>
-              <TabItem onClick={() => setFishes(originMenus)}>해산물</TabItem>
-              <TabItem onClick={() => setMeat(originMenus)}>육류</TabItem>
-              <TabItem onClick={() => setDairy(originMenus)}>유제품</TabItem>
+              <TabItem onClick={handleClickAll} current={currentTab === ALL}>
+                전체보기
+              </TabItem>
+              <TabItem
+                onClick={handleClickVegan}
+                current={currentTab === VEGAN}
+              >
+                비건
+              </TabItem>
+              <TabItem
+                onClick={handleClickFishes}
+                current={currentTab === FISHES}
+              >
+                해산물
+              </TabItem>
+              <TabItem onClick={handleClickMeat} current={currentTab === MEAT}>
+                육류
+              </TabItem>
+              <TabItem
+                onClick={handleClickDairy}
+                current={currentTab === DAIRY}
+              >
+                유제품
+              </TabItem>
             </TabList>
           </TabContainer>
           <Catalog menus={menus} />
