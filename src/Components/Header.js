@@ -25,6 +25,10 @@ const Item = styled.li`
   height: 50px;
   text-align: center;
   font-weight: 400;
+  &:hover {
+    color: #30a76b;
+    border-bottom: 2px solid #30a76b;
+  }
   color: ${props => (props.current ? "#30A76B" : "#6e7074")};
 `;
 

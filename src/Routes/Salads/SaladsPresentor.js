@@ -18,15 +18,11 @@ const Title = styled.h1`
 `;
 
 const TabContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 280px;
   height: 30px;
   opacity: 0.7;
   font-size: 13px;
   font-weight: 400;
-
   margin-bottom: 20px;
   cursor: pointer;
 `;
@@ -44,6 +40,10 @@ const TabItem = styled.li`
   width: 20%;
   height: 100%;
   border-bottom: 1px solid #e8e8e8;
+  &:hover {
+    color: #30a76b;
+    border-bottom: 2px solid #30a76b;
+  }
 `;
 
 const SaladsPresentor = ({

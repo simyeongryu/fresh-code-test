@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import DetailPresentor from "./DetailPresentor";
+import CalendarPresentor from "./DetailPresentor";
 import { api } from "../../api";
-import { useParams } from "react-router-dom";
 
-const DetailContainer = () => {
-  const param = useParams();
+const CalendarContainer = () => {
   const [holidays, setHolidays] = useState(null);
-  const [menu, setMenu] = useState(null);
 
   useEffect(() => {
     try {
@@ -16,20 +13,12 @@ const DetailContainer = () => {
         } = await api.dayoff();
         setHolidays(holidays);
       })();
-
-      (async () => {
-        const {
-          data: { menus }
-        } = await api.salads();
-        const temp = menus.find(menu => menu.id === +param.id);
-        setMenu(temp);
-      })();
     } catch (e) {
       console.log(e);
     }
   }, []);
 
-  return <DetailPresentor holidays={holidays} menu={menu} />;
+  return <CalendarPresentor holidays={holidays} />;
 };
 
-export default DetailContainer;
+export default CalendarContainer;
