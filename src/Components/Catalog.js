@@ -25,13 +25,6 @@ const ImageContainer = styled.div`
   margin-bottom: 10px;
 `;
 
-const Image = styled.div`
-  background-image: url(${props => props.imgUrl});
-  background-size: cover;
-  width: 100%;
-  height: 320px;
-`;
-
 const MenuItem = styled.li`
   width: 320px;
   height: 420px;
@@ -39,9 +32,16 @@ const MenuItem = styled.li`
   margin-bottom: 25px;
   &:hover {
     ${ImageContainer} {
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
+`;
+
+const Image = styled.div`
+  background-image: url(${props => props.imgUrl});
+  background-size: cover;
+  width: 100%;
+  height: 320px;
 `;
 
 const TextContainer = styled.div`

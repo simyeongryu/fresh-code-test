@@ -19,6 +19,7 @@ const SaladsContainer = ({ setAll }) => {
     } catch (e) {
       console.log(e);
     }
+    return;
   }, []);
 
   return <SaladsPresentor menus={menus} originMenus={menus} />;

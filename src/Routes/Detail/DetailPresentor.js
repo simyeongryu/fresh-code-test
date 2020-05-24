@@ -12,19 +12,19 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 40%;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 `;
 
 const Image = styled.div`
-  width: 100%;
-  height: 460px;
+  width: 500px;
+  height: 500px;
   background-image: url(${props => props.imgUrl});
   background-size: cover;
 `;
 
 const TextContainer = styled.div`
-  width: 60%;
+  width: 500px;
   margin-left: 50px;
 `;
 
@@ -41,7 +41,6 @@ const Description = styled.p`
 `;
 
 const DetailPresentor = ({ holidays, menu }) => {
-  console.log(menu);
   return (
     <>
       {holidays && menu ? (
