@@ -2,14 +2,14 @@
 
 ## 사용한 라이브러리
 
-1. axios - 데이터 fetching 
-2. styled-components - 스타일링
-3. react-router-dom - 페이지 라우팅
-4. redux - state 관리
-5. react-redux - redux와 react 연동
-6. prop-types - prop 디버깅
-7. react-slideshow-image - carousel 구현
-8. react-datepicker - calendar 구현
+1. `axios` - 데이터 fetching 
+2. `styled-components` - 스타일링
+3. `react-router-dom` - 페이지 라우팅
+4. `redux` - state 관리
+5. `react-redux` - redux와 react 연동
+6. `prop-types` - prop 디버깅
+7. `react-slideshow-image` - carousel 구현
+8. `react-datepicker` - calendar 구현
 
 ## 폴더 및 파일 구조
 
@@ -31,5 +31,3 @@
     - `...Container`: state를 관리하고 Presentor로 전달하는 파일
     - `...Presentor`: 스타일링을 포함한 화면 구현 파일
     - `index.js`: Container를 export 하는 파일
-
-
