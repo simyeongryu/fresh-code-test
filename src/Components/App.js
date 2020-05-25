@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../Routes/Home";
 import Salads from "../Routes/Salads";
 import Detail from "../Routes/Detail";
@@ -8,7 +8,7 @@ import Header from "./Header";
 const App = () => {
   return (
     <>
-      <HashRouter>
+      <Router>
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/:id" component={Detail} />
           <Route to="/" />
         </Switch>
-      </HashRouter>
+      </Router>
     </>
   );
 };
