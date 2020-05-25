@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
  * 상세 페이지 state 관리
  */
 const DetailContainer = () => {
-  const [holidays, setHolidays] = useState(null); // 휴일 목록
+  const [holidays, setHolidays] = useState([]); // 휴일 목록
   const [menu, setMenu] = useState(null); // 메뉴
   const param = useParams(); // 해당 메뉴의 id
 

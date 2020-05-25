@@ -6,11 +6,11 @@ import { connect } from "react-redux";
 import { actionCreator } from "../../store";
 
 /**
- * 메뉴 페이지 데이터 관리
+ * 메뉴 페이지 state 관리
  * @param {funciton} setAll - store에서 받아온 dipatch
  */
 const SaladsContainer = ({ setAll }) => {
-  const [menus, setOriginMenus] = useState(null);
+  const [menus, setOriginMenus] = useState([]);
 
   useEffect(() => {
     try {

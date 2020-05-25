@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import HomePresentor from "./HomePresentor";
 import { api } from "../../api";
 
+/**
+ * 메인 페이지 state 관리
+ */
 const HomeContainer = () => {
-  const [banners, setBanners] = useState(null);
+  const [banners, setBanners] = useState([]);
 
   useEffect(() => {
     try {

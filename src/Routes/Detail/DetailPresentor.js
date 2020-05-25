@@ -73,7 +73,7 @@ const DetailPresentor = ({ holidays, menu }) => {
 
 DetailPresentor.propTypes = {
   holidays: PropTypes.array.isRequired,
-  menu: PropTypes.array.isRequired
+  menu: PropTypes.object.isRequired
 };
 
 export default DetailPresentor;
