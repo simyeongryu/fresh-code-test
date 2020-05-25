@@ -1,0 +1,11 @@
+[[build]]
+  command = "yarn run build"
+  functions = "functions"
+  publish = "dist"
+
+[[redirects]]
+from = "/search"
+to = "https://exam.freshcode.me/front/"
+status = 200
+force = true
+headers = {X-From = "Netlify"}
