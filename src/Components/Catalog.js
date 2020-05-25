@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Tags from "./Tags";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
+// styling
 const Container = styled.div`
   width: 100%;
 `;
@@ -68,6 +70,10 @@ const MenuPrice = styled.p`
   margin-bottom: 10px;
 `;
 
+/**
+ * 카탈로그를 구현하는 컴포넌트
+ * @param {array} menus - api에서 받아온 메뉴 목록
+ */
 const Catalog = ({ menus }) => {
   return (
     <Container>
@@ -90,6 +96,10 @@ const Catalog = ({ menus }) => {
       </MenuList>
     </Container>
   );
+};
+
+Catalog.propTypes = {
+  menus: PropTypes.array.isRequired
 };
 
 export default Catalog;

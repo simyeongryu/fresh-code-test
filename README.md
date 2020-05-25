@@ -9,12 +9,13 @@
 ## 4. 사용한 라이브러리
 
 1. axios
-2. react-router-dom
-3. redux
-4. react-redux
-5. react-slideshow-image
-6. styled-components
-7. react-datepicker
+2. styled-components
+3. react-router-dom
+4. redux
+5. react-redux
+6. prop-types
+7. react-slideshow-image
+8. react-datepicker
 
 ## 이슈
 

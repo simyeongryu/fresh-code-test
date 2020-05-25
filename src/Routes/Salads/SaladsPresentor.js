@@ -4,7 +4,9 @@ import Loading from "../../Components/Loading";
 import Catalog from "../../Components/Catalog";
 import { connect } from "react-redux";
 import { actionCreator } from "../../store";
+import PropTypes from "prop-types";
 
+// 탭 아이템 CSS 변동을 위한 변수들
 let currentTab = "all";
 const ALL = "all";
 const VEGAN = "vegan";
@@ -55,6 +57,16 @@ const TabItem = styled.li`
   }
 `;
 
+/**
+ * 메뉴 페이지 화면 구현 컴포넌트
+ * @param {array} menus - store에서 관리되는 state
+ * @param {array} originMenus - reducer로 보낼 api 내 메뉴 목록 전체
+ * @param {function} setAll - 모든 메뉴를 보여주는 dispatch
+ * @param {function} setVegan - 비건 메뉴를 보여주는 dispatch
+ * @param {function} setFishes - 해산물 메뉴를 보여주는 dispatch
+ * @param {function} setMeat - 육류 메뉴를 보여주는 dispatch
+ * @param {function} setDairy - 유제품 메뉴를 보여주는 dispatch
+ */
 const SaladsPresentor = ({
   menus,
   originMenus,
@@ -64,6 +76,7 @@ const SaladsPresentor = ({
   setMeat,
   setDairy
 }) => {
+  // 탭 클릭 이벤트
   const handleClickAll = () => {
     setAll(originMenus);
     currentTab = ALL;
@@ -125,6 +138,16 @@ const SaladsPresentor = ({
       )}
     </>
   );
+};
+
+SaladsPresentor.propTypes = {
+  menus: PropTypes.array.isRequired,
+  originMenus: PropTypes.array.isRequired,
+  setAll: PropTypes.func.isRequired,
+  setVegan: PropTypes.func.isRequired,
+  setFishes: PropTypes.func.isRequired,
+  setMeat: PropTypes.func.isRequired,
+  setDairy: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => ({ menus: state });

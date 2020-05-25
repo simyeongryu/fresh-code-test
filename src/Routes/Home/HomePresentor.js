@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import SlideItem from "../../Components/SlideItem";
 import Loading from "../../Components/Loading";
+import PropTypes from "prop-types";
 
 const SlideContatiner = styled.div`
   width: 100%;
@@ -23,6 +24,10 @@ const properties = {
   pauseOnHover: true // 마우스 올리면 멈춤
 };
 
+/**
+ * 메인 페이지 화면 구현 컴포넌트
+ * @param {array} banners - api에서 받아온 banner 목록
+ */
 const HomePresentor = ({ banners }) => {
   return (
     <>
@@ -39,6 +44,10 @@ const HomePresentor = ({ banners }) => {
       )}
     </>
   );
+};
+
+HomePresentor.propTypes = {
+  banners: PropTypes.array.isRequired
 };
 
 export default HomePresentor;

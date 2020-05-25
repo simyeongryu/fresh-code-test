@@ -1,11 +1,13 @@
 import { createStore } from "redux";
 
+// action types
 const ALL = "ALL";
 const VEGAN = "VEGAN";
 const FISHES = "FISHES";
 const MEAT = "MEAT";
 const DAIRY = "DAIRY";
 
+// action 생성 함수
 export const actionCreator = {
   setAll: menus => ({ type: ALL, menus }),
   setVegan: menus => ({ type: VEGAN, menus }),

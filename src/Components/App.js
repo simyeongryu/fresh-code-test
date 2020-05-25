@@ -5,7 +5,7 @@ import Salads from "../Routes/Salads";
 import Detail from "../Routes/Detail";
 import Header from "./Header";
 
-const App = () => {
+export default () => {
   return (
     <>
       <Router>
@@ -20,5 +20,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;

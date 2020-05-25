@@ -2,7 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 
-const Header = styled.header`
+const SHeader = styled.header`
   color: black;
   position: fixed;
   top: 0;
@@ -40,9 +40,14 @@ const StyledLink = styled(Link)`
   justify-content: center;
 `;
 
-export default withRouter(({ location: { pathname } }) => {
+/**
+ * Header 레이아웃 컴포넌트.
+ * withRouter로 props 생성
+ * @param {string} pathname - 탭 기능 구현을 위한 현재 url
+ */
+const Header = ({ location: { pathname } }) => {
   return (
-    <Header>
+    <SHeader>
       <List>
         <Item current={pathname === "/"}>
           <StyledLink to="/">홈</StyledLink>
@@ -51,6 +56,8 @@ export default withRouter(({ location: { pathname } }) => {
           <StyledLink to="/salads">메뉴보기</StyledLink>
         </Item>
       </List>
-    </Header>
+    </SHeader>
   );
-});
+};
+
+export default withRouter(Header);

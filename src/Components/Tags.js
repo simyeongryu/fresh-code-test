@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Container = styled.div`
   width: 100%;
@@ -24,7 +25,6 @@ const IngredientItem = styled.div`
 const VegetarianismContainer = styled.div`
   font-size: 11px;
   color: #f98c4d;
-
   float: right;
 `;
 
@@ -33,9 +33,13 @@ const VegetarianismItem = styled.div`
   border: 1px solid #f98c4d;
 `;
 
+/**
+ * 카탈로그 내 아이템의 tag를 구현하는 컴포넌트
+ * @param {array} tags - 각 메뉴의 tag 배열
+ */
 const Tags = ({ tags }) => {
   const ingredientArr = tags.filter(tag => tag.type === "ingredient");
-  const vegetarianismItem = tags.filter(tag => tag.type === "vegetarianism")[0];
+  const vegetarianismItem = tags.find(tag => tag.type === "vegetarianism");
 
   return (
     <>
@@ -53,6 +57,10 @@ const Tags = ({ tags }) => {
       ) : null}
     </>
   );
+};
+
+Tags.propTypes = {
+  tags: PropTypes.array.isRequired
 };
 
 export default Tags;
