@@ -1,12 +1,12 @@
 import axios from "axios";
 
-// const url = axios.create({
-//   baseURL: "https://exam.freshcode.me/front/"
-// })
-
 export const api = {
   banners() {
-    return axios.get("banners");
+    return axios({
+      method: "GET",
+      url: "banners",
+      "Access-Control-Allow-Origin": "*"
+    });
   },
   salads() {
     return axios.get("salads");

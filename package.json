@@ -8,6 +8,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "netlify-cli": "^2.51.0",
     "react": "^16.13.1",
     "react-datepicker": "^2.16.0",
