@@ -77,25 +77,9 @@ const SaladsPresentor = ({
   setDairy
 }) => {
   // 탭 클릭 이벤트
-  const handleClickAll = () => {
-    setAll(originMenus);
-    currentTab = ALL;
-  };
-  const handleClickVegan = () => {
-    setVegan(originMenus);
-    currentTab = VEGAN;
-  };
-  const handleClickFishes = () => {
-    setFishes(originMenus);
-    currentTab = FISHES;
-  };
-  const handleClickMeat = () => {
-    setMeat(originMenus);
-    currentTab = MEAT;
-  };
-  const handleClickDairy = () => {
-    setDairy(originMenus);
-    currentTab = DAIRY;
+  const handleClick = (dispatch, type) => {
+    dispatch(originMenus);
+    currentTab = type;
   };
 
   return (
@@ -105,26 +89,32 @@ const SaladsPresentor = ({
           <Title>프레시 코드 샐러드</Title>
           <TabContainer>
             <TabList>
-              <TabItem onClick={handleClickAll} current={currentTab === ALL}>
+              <TabItem
+                onClick={() => handleClick(setAll, ALL)}
+                current={currentTab === ALL}
+              >
                 전체보기
               </TabItem>
               <TabItem
-                onClick={handleClickVegan}
+                onClick={() => handleClick(setVegan, VEGAN)}
                 current={currentTab === VEGAN}
               >
                 비건
               </TabItem>
               <TabItem
-                onClick={handleClickFishes}
+                onClick={() => handleClick(setFishes, FISHES)}
                 current={currentTab === FISHES}
               >
                 해산물
               </TabItem>
-              <TabItem onClick={handleClickMeat} current={currentTab === MEAT}>
+              <TabItem
+                onClick={() => handleClick(setMeat, MEAT)}
+                current={currentTab === MEAT}
+              >
                 육류
               </TabItem>
               <TabItem
-                onClick={handleClickDairy}
+                onClick={() => handleClick(setDairy, DAIRY)}
                 current={currentTab === DAIRY}
               >
                 유제품
