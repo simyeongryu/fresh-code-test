@@ -80,7 +80,7 @@ const Catalog = ({ menus }) => {
       <MenuList>
         {menus.map((menu, i) => (
           <MenuItem key={i}>
-            <MenuLink to={`/${menu.id}`}>
+            <MenuLink to={`/salads/${menu.id}`}>
               <ImageContainer>
                 <Image imgUrl={menu.imgUrl} />
               </ImageContainer>

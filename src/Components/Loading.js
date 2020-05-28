@@ -15,9 +15,7 @@ const Container = styled.div`
  */
 const Loading = () => (
   <Container>
-    <span role="img" aria-label="Loading">
-      Loading...
-    </span>
+    <span>Loading...</span>
   </Container>
 );
 

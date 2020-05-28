@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DetailPresentor from "./DetailPresentor";
 import { api } from "../../api";
-import { useParams } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
 
 /**
  * 상세 페이지 state 관리
